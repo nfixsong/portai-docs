@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PortAI - Legal Documents | 법률 문서</title>
+<meta name="description" content="PortAI legal documents hosted by NFIX. Privacy Policy, Terms of Service, and Refund Policy.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif;
+  background: linear-gradient(135deg, #eff6ff 0%, #f0f7ff 50%, #f5f8fc 100%);
+  min-height: 100vh;
+  color: #1a2744;
+  padding: 40px 20px;
+}
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.logo-icon {
+  width: 64px; height: 64px;
+  background: linear-gradient(135deg, #2e6da4, #7b2fbe);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  box-shadow: 0 8px 24px rgba(46, 109, 164, 0.3);
+}
+.logo-text {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #2e6da4, #7b2fbe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.subtitle {
+  color: #6b7489;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.lang-toggle {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.lang-toggle button {
+  padding: 8px 20px;
+  border: 1px solid #2e6da4;
+  border-radius: 20px;
+  background: white;
+  color: #2e6da4;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+.lang-toggle button.active {
+  background: #2e6da4;
+  color: white;
+}
+.lang-toggle button:hover:not(.active) {
+  background: #eff6ff;
+}
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #6b7489;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  padding-left: 4px;
+}
+.doc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+.doc-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  border: 1px solid rgba(46, 109, 164, 0.08);
+  transition: all 0.2s ease;
+}
+.doc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(46, 109, 164, 0.15);
+  border-color: #2e6da4;
+}
+.doc-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.doc-icon.blue { background: #eff6ff; }
+.doc-icon.purple { background: #f3e8ff; }
+.doc-icon.red { background: #fee2e2; }
+.doc-info {
+  flex: 1;
+  min-width: 0;
+}
+.doc-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a2744;
+  margin-bottom: 2px;
+}
+.doc-desc {
+  font-size: 13px;
+  color: #6b7489;
+  line-height: 1.5;
+}
+.doc-arrow {
+  color: #8891a5;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.contact-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  margin-bottom: 24px;
+}
+.contact-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #6b7489;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+.contact-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 14px;
+}
+.contact-row:last-child { border-bottom: none; }
+.contact-label {
+  font-weight: 600;
+  color: #6b7489;
+  width: 140px;
+  flex-shrink: 0;
+}
+.contact-value {
+  color: #1a2744;
+}
+.contact-value a {
+  color: #2e6da4;
+  text-decoration: none;
+}
+.contact-value a:hover {
+  text-decoration: underline;
+}
+.footer {
+  text-align: center;
+  color: #8891a5;
+  font-size: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(107, 116, 137, 0.15);
+}
+.footer-brand {
+  font-weight: 700;
+  color: #2e6da4;
+}
+.lang-section { display: none; }
+.lang-section.active { display: block; }
+
+@media (max-width: 600px) {
+  body { padding: 24px 16px; }
+  .header { margin-bottom: 30px; }
+  .logo-icon { width: 52px; height: 52px; font-size: 26px; border-radius: 16px; }
+  .logo-text { font-size: 26px; }
+  .doc-card { padding: 16px 18px; }
+  .doc-icon { width: 42px; height: 42px; font-size: 20px; }
+  .doc-title { font-size: 15px; }
+  .doc-desc { font-size: 12px; }
+  .contact-row { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .contact-label { width: auto; font-size: 12px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="logo">
+      <div class="logo-icon">🧠</div>
+      <div class="logo-text">PortAI</div>
+    </div>
+    <div class="subtitle" id="subtitle">Legal Documents · 법률 문서</div>
+  </div>
+
+  <div class="lang-toggle">
+    <button id="btn-ko" class="active" onclick="setLang('ko')">한국어</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- ═══════════════════ 한국어 ═══════════════════ -->
+  <div id="lang-ko" class="lang-section active">
+
+    <div class="section-title">📚 공식 법률 문서</div>
+    <div class="doc-list">
+      <a href="privacy.html" class="doc-card">
+        <div class="doc-icon blue">📄</div>
+        <div class="doc-info">
+          <div class="doc-title">개인정보처리방침</div>
+          <div class="doc-desc">이용자 개인정보 수집·이용·보관·파기에 관한 정책</div>
+        </div>
+        <div class="doc-arrow">→</div>
+      </a>
+      <a href="terms.html" class="doc-card">
+        <div class="doc-icon purple">📜</div>
+        <div class="doc-info">
+          <div class="doc-title">이용약관</div>
+          <div class="doc-desc">서비스 이용에 관한 권리·의무·환불 정책</div>
+        </div>
+        <div class="doc-arrow">→</div>
+      </a>
+      <a href="terms.html#section-9" class="doc-card">
+        <div class="doc-icon red">💰</div>
+        <div class="doc-info">
+          <div class="doc-title">환불 정책</div>
+          <div class="doc-desc">사용량 비례 환불 · Anthropic 방식 적용</div>
+        </div>
+        <div class="doc-arrow">→</div>
+      </a>
+    </div>
+
+    <div class="section-title">🏢 회사 정보</div>
+    <div class="contact-card">
+      <div class="contact-row">
+        <div class="contact-label">사업자명</div>
+        <div class="contact-value"><strong>NFIX (엔픽스)</strong></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label">대표</div>
+        <div class="contact-value">송인철</div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label">사업자등록번호</div>
+        <div class="contact-value">604-19-13861</div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label">소재지</div>
+        <div class="contact-value">대전광역시 유성구 반석로 36, 5층 576호</div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label">이메일</div>
+        <div class="contact-value"><a href="mailto:sci.nfix@gmail.com">sci.nfix@gmail.com</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label">전화</div>
+        <div class="contact-value">010-5450-5944</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2026 <span class="footer-brand">NFIX</span>. All rights reserved.<br>
+      PortAI is a product of NFIX. Powered by Claude AI.
+    </div>
+  </div>
+
+  <!-- ═══════════════════ English ═══════════════════ -->
+  <div id="lang-en" class="lang-section">
+
+    <div class="section-title">📚 Official Legal Documents</div>
+    <div class="doc-list">
+      <a href="privacy.html?lang=en" class="doc-card">
+        <div class="doc-icon blue">📄</div>
+        <div class="doc-info">
+          <div class="doc-title">Privacy Policy</div>
+          <div class="doc-desc">How we collect, use, store, and delete personal data</div>
+        </div>
+        <div class="doc-arrow">→</div>
+      </a>
+      <a href="terms.html?lang=en" class="doc-card">
+        <div class="doc-icon purple">📜</div>
+        <div class="doc-info">
+          <div class="doc-title">Terms of Service</div>
+          <div class="doc-desc">Rights, obligations, and refund policy for Service use</div>
+        </div>
+        <div class="doc-arrow">→</div>
+      </a>
+      <a href="terms.html?lang=en#section-9" class="doc-card">
+        <div class="doc-icon red">💰</div>
+        <div class="doc-info">
+          <div class="doc-title">Refund Policy</div>
+          <div class="doc-desc">Pro-rated refunds · Anthropic-style approach</div>
+        </div>
+        <div class="doc-arrow">→</div>
+      </a>
+    </div>
+
+    <div class="section-title">🏢 Company Information</div>
+    <div class="contact-card">
+      <div class="contact-row">
+        <div class="contact-label">Business Name</div>
+        <div class="contact-value"><strong>NFIX</strong></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label">Representative</div>
+        <div class="contact-value">Incheol Song (송인철)</div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label">Business Reg. No.</div>
+        <div class="contact-value">604-19-13861</div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label">Address</div>
+        <div class="contact-value">5F #576, 36 Banseok-ro, Yuseong-gu, Daejeon, Republic of Korea</div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label">Email</div>
+        <div class="contact-value"><a href="mailto:sci.nfix@gmail.com">sci.nfix@gmail.com</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label">Phone</div>
+        <div class="contact-value">+82-10-5450-5944</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2026 <span class="footer-brand">NFIX</span>. All rights reserved.<br>
+      PortAI is a product of NFIX. Powered by Claude AI.
+    </div>
+  </div>
+
+</div>
+
+<script>
+function setLang(lang) {
+  document.getElementById('lang-ko').classList.remove('active');
+  document.getElementById('lang-en').classList.remove('active');
+  document.getElementById('btn-ko').classList.remove('active');
+  document.getElementById('btn-en').classList.remove('active');
+  document.getElementById('lang-' + lang).classList.add('active');
+  document.getElementById('btn-' + lang).classList.add('active');
+  document.documentElement.lang = lang;
+  document.title = lang === 'ko' ? 'PortAI - 법률 문서' : 'PortAI - Legal Documents';
+  document.getElementById('subtitle').textContent = lang === 'ko' ? '법률 문서 · Legal Documents' : 'Legal Documents · 법률 문서';
+}
+if (navigator.language && !navigator.language.startsWith('ko')) setLang('en');
+</script>
+</body>
+</html>
